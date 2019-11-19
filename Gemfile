@@ -7,7 +7,10 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 6', github: 'rails/rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
-gem 'therubyracer', platforms: :ruby
+
+group :assets do
+  gem 'therubyracer', platforms: :ruby
+end
 
 ##-- rails helper gems --##
 gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
