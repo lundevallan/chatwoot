@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'accounts@chatwoot.com'
+  default from: 'noreply@infunnelapps.com'
   layout 'mailer'
 
   # helpers

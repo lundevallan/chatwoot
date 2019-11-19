@@ -1,5 +1,5 @@
 class AssignmentMailer < ApplicationMailer
-  default from: 'accounts@chatwoot.com'
+  default from: 'noreply@infunnelapps.com'
   layout 'mailer'
 
   def conversation_assigned(conversation, agent)
