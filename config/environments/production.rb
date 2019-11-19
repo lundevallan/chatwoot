@@ -55,6 +55,8 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "chatwoot_production"
 
+  ActionMailer::Base.default :from => 'noreply@infunnelapps.com'
+
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { :host => ENV['frontend_url'] }
   config.action_mailer.smtp_settings = {
@@ -84,7 +86,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV['RAILS_LOG_TO_STDOUT'].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present? 
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
